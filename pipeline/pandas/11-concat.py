@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Module that concatenates two DataFrames."""
+import pandas as pd
 
 
 def concat(df1, df2):
@@ -11,7 +12,7 @@ def concat(df1, df2):
 
     df2 = df2.loc[:1417411920]
 
-    return __import__('pandas').concat(
+    return pd.concat(
         [df2, df1],
         keys=['bitstamp', 'coinbase']
     )
