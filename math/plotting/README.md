@@ -15,3 +15,4 @@ histograms.
 | `5-all_in_one.py` | All 5 previous graphs in one 3 x 2 figure |
 | `6-bars.py` | Stacked bar graph of the fruit each person has |
 | `100-gradient.py` | Scatter plot of mountain elevations with a colorbar |
+| `101-pca.py` | 3D PCA visualization of the Iris dataset |
