@@ -11,3 +11,4 @@ histograms.
 | `2-change_scale.py` | Line graph of C-14 decay with a log y-axis |
 | `3-two.py` | Two line graphs: decay of C-14 and Ra-226 |
 | `3-two.py` | Two line graphs: decay of C-14 and Ra-226 |
+| `4-frequency.py` | Histogram of student grades for a project |
