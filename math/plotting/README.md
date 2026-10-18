@@ -14,3 +14,4 @@ histograms.
 | `4-frequency.py` | Histogram of student grades for a project |
 | `5-all_in_one.py` | All 5 previous graphs in one 3 x 2 figure |
 | `6-bars.py` | Stacked bar graph of the fruit each person has |
+| `100-gradient.py` | Scatter plot of mountain elevations with a colorbar |
