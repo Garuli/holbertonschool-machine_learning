@@ -7,3 +7,4 @@ histograms.
 | File | Description |
 |------|-------------|
 | `0-line.py` | Plots a cubic line graph |
+| `1-scatter.py` | Scatter plot of men's height vs weight |
