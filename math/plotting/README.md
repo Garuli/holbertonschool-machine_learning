@@ -13,3 +13,4 @@ histograms.
 | `3-two.py` | Two line graphs: decay of C-14 and Ra-226 |
 | `4-frequency.py` | Histogram of student grades for a project |
 | `5-all_in_one.py` | All 5 previous graphs in one 3 x 2 figure |
+| `6-bars.py` | Stacked bar graph of the fruit each person has |
