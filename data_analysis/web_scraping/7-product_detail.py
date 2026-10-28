@@ -38,4 +38,3 @@ def scrape_product_detail(url, delay=2.0):
         }
     finally:
         driver.quit()
-        
