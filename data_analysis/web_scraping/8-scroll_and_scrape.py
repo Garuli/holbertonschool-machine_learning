@@ -4,6 +4,7 @@ import time
 from selenium import webdriver
 
 CSS = "css selector"
+HEIGHT = "return document.body.scrollHeight"
 
 
 def scroll_and_scrape(url, scroll_pause=2.0):
@@ -11,7 +12,7 @@ def scroll_and_scrape(url, scroll_pause=2.0):
 
     Args:
         url: the infinite-scroll page.
-        scroll_pause: seconds to wait after each scroll.
+        scroll_pause: max seconds to wait for new content after a scroll.
 
     Returns:
         A list of unique dicts with keys "title", "price", "description"
@@ -28,16 +29,19 @@ def scroll_and_scrape(url, scroll_pause=2.0):
     seen = set()
     try:
         driver.get(url)
-        time.sleep(scroll_pause)
 
-        last_height = driver.execute_script(
-            "return document.body.scrollHeight")
+        last_height = driver.execute_script(HEIGHT)
         while True:
             driver.execute_script(
                 "window.scrollTo(0, document.body.scrollHeight);")
-            time.sleep(scroll_pause)
-            new_height = driver.execute_script(
-                "return document.body.scrollHeight")
+            waited = 0.0
+            new_height = last_height
+            while waited < scroll_pause:
+                time.sleep(0.1)
+                waited += 0.1
+                new_height = driver.execute_script(HEIGHT)
+                if new_height > last_height:
+                    break
             if new_height <= last_height:
                 break
             last_height = new_height
